@@ -111,7 +111,7 @@ body {
   }
 }
 .sello.active {
-  animation: hide 3s ease forwards;
+  animation: hide 2s ease forwards;
 }
 @keyframes hide {
   0%{
