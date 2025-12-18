@@ -120,8 +120,9 @@ body {
     align-items: center;
     justify-content: space-around;
     background-color: var(--body-bg);
-    box-shadow: 0 0 10px #00000020;
+    box-shadow: 0 5px 10px #00000020;
     border-radius: 15px;
+    border: 1px solid var(--wine-burgundy);
     position: absolute;
     padding: 2rem;
     z-index: 25;
