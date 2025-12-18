@@ -1,132 +1,128 @@
 @import url("https://fonts.googleapis.com/css2?family=Italianno&family=Tangerine:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Outfit:wght@100..900&display=swap");
 
-body {
+:root {
+  --body-bg: #fff7f3;
+}
+* {
+  padding: 0;
   margin: 0;
-  height: 300vh;
-  font-family: "Tangerine", sans-serif;
-  background-color: #562f;
+  box-sizing: border-box;
 }
-
-.scene {
-  position: relative;
+body {
+  font-family: "Italianno", sans-serif;
+  background-color: var(--body-bg);
 }
-
-.envelope {
-  position: fixed;
-  top: 0;
-  left: 0;
+.ct_skew {
   width: 100%;
   height: 100vh;
-  pointer-events: none;
-}
-
-.flap {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 60%;
-  z-index: 10;
-  background: #562f;
-  clip-path: polygon(100% 0, 100% 50%, 50% 100%, 0 50%, 0 0);
-  transform-origin: top center;
-  transform: rotateX(0deg);
-  filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.45));
-  will-change: transform;
-}
-
-.flap::before {
-  content: "";
-  position: absolute;
-  inset: -3px;
-  background: #3f4a22;
-  clip-path: polygon(100% 0, 100% 50%, 50% 100%, 0 50%, 0 0);
-  z-index: -1;
-}
-
-.inner-flap {
-  width: 100%;
-  text-align: center;
   position: relative;
-  color: #fff;
-  font-size: 3rem;
+  z-index: 10;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
+  background: url("../sources/mark-de-jong-XeRVnghi1hY-unsplash.jpg") no-repeat
+    center/cover;
 }
-
-.body {
+.ct_skew .skew {
+  background-color: var(--body-bg);
   position: absolute;
-  bottom: 0;
   width: 100%;
-  z-index: 2;
   height: 50%;
-  background: #562f;
+  bottom: calc(-20% - 50px);
+  z-index: 20;
+  transform: skew(95deg, 10deg);
 }
 
-.inner-body {
+.ct_skew .ct_cap {
+  position: absolute;
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: end;
-  justify-content: center;
-  text-align: center;
-  position: relative;
+  align-items: center;
   color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  background: #00000050;
+  z-index: 15;
+}
+
+.ct_skew .ct_cap h2 {
   font-size: 1.5rem;
+  font-family: "Cormorant Garamond", sans-serif;
+  text-shadow: 0 5px 10px #00000080;
+  font-weight: 300;
+  line-height: 30px;
+  margin-bottom: calc(5% - 20px);
 }
 
-.letter {
-  position: fixed;
-  bottom: -100%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
-  background: white;
-  padding: 3rem;
-  z-index: -10;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+.ct_skew .ct_cap h2 p {
+  font-size: 2.5rem;
+  font-weight: 400;
 }
 
-.letter.active {
-  z-index: 5;
+.ct_skew .ct_cap h1 {
+  font-size: 5rem;
+  font-weight: 400;
+  text-shadow: 0 5px 10px #00000080;
+  width: 10%;
+  text-align: center;
+  margin-bottom: calc(10% + 20px);
 }
 
-.sello {
-  position: absolute;
-  top: calc(20% - 20px);
-  left: calc(50% - 70px);
-  width: 150px;
-  height: 150px;
-  z-index: 10;
-  overflow: hidden;
-  animation: rebote 2s ease infinite alternate;
-  transition: 0.5s ease all;
-}
-@keyframes rebote {
-  0% {
-    transform: scale(0.7);
+@media (max-width: 450px) {
+  .ct_skew .skew {
+    height: 100%;
+    bottom: calc(-40% - 10px);
+    transform: skew(-65deg, 15deg);
   }
-  50% {
-    transform: scale(1);
+
+  .ct_skew .ct_cap h2 {
+    font-size: 1.5rem;
+    font-family: "Cormorant Garamond", sans-serif;
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: calc(20% - 20px);
   }
-  100% {
-    transform: scale(0.7);
+
+  .ct_skew .ct_cap h2 p {
+    font-size: 2.5rem;
+    font-weight: 400;
   }
-}
-.sello.active {
-  animation: hide 1s ease forwards;
-}
-@keyframes hide {
-  0%{
-    opacity: 1;
-    transform: scale(1) translateY(0);
+
+  .ct_skew .ct_cap h1 {
+    font-size: 5rem;
+    font-weight: 400;
+    width: 40%;
+    line-height: 4.5rem;
+    text-align: center;
+    margin-bottom: calc(60% + 20px);
   }
-  100%{
-    opacity: 0;
-    transform: scale(1) translateY(100%);
+  .ct_skew .countdown{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--body-bg);
+    box-shadow: 0 0 10px #00000020;
+    border-radius: 15px;
+    padding: 4rem;
+    position: absolute;
+    z-index: 25;
+    bottom: calc(15% - 20px);
   }
-}
-.sello img {
-  width: 100%;
-  height: 100%;
-  vertical-align: top;
-  object-fit: cover;
-  object-position: center;
+  .ct_skew .countdown::before{
+    content: "¡Cuenta Regresiva!";
+    position: absolute;
+    font-family: 'cormorant garamond', serif;
+    top: 10px;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
 }
