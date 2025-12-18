@@ -3,6 +3,18 @@
 
 :root {
   --body-bg: #fff7f3;
+  --wine-deep:        #5A0F2E;
+  --wine-guinda:      #7B1E3A;
+  --wine-classic:     #8C1D40;
+  --wine-burgundy:    #A33A5B;
+  --wine-rose:        #C97A8C;
+  --cream-soft:       #F5EFEA;
+  --white-broken:     #FBF7F4;
+  --gold-soft:        #C9A24D;
+  --olive-romantic:   #3F4A22;
+  --shadow-soft:      rgba(0, 0, 0, 0.15);
+  --shadow-medium:    rgba(0, 0, 0, 0.25);
+  --shadow-strong:    rgba(0, 0, 0, 0.4);
 }
 * {
   padding: 0;
@@ -102,15 +114,16 @@ body {
   }
   .ct_skew .countdown{
     width: 90%;
+    height: 200px;
     margin: auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: var(--body-bg);
     box-shadow: 0 0 10px #00000020;
     border-radius: 15px;
-    padding: 4rem;
     position: absolute;
+    padding: 2rem;
     z-index: 25;
     bottom: calc(15% - 20px);
   }
@@ -118,11 +131,45 @@ body {
     content: "¡Cuenta Regresiva!";
     position: absolute;
     font-family: 'cormorant garamond', serif;
-    top: 10px;
+    top: 20px;
     left: 0;
     display: flex;
+    font-weight: 500;
     width: 100%;
+    color: var(--wine-burgundy);
+    font-size: 1.25rem;
     justify-content: center;
     text-align: center;
+  }
+  .ct_skew .countdown .time:nth-child(odd){
+    color: var(--wine-classic);
+    font-weight: 700;
+    padding: 1.5rem 1rem;
+    font-size: 2rem;
+    display: flex;
+    font-family: 'cormorant garamond', serif;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3rem;
+    text-align: center;
+  }
+  .ct_skew .countdown .time:nth-child(even){
+    color: var(--wine-classic);
+    padding: 1.5rem 1rem;
+    font-size: 2rem;
+    border-radius: 3rem;
+    display: flex;
+    font-family: 'cormorant garamond', serif;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    text-align: center;
+  }
+  .ct_skew .countdown .time small{
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-top: 5px;
   }
 }
