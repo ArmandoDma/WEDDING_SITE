@@ -10,8 +10,6 @@
   --wine-rose:        #C97A8C;
   --cream-soft:       #F5EFEA;
   --white-broken:     #FBF7F4;
-  --gold-soft:        #C9A24D;
-  --olive-romantic:   #3F4A22;
   --shadow-soft:      rgba(0, 0, 0, 0.15);
   --shadow-medium:    rgba(0, 0, 0, 0.25);
   --shadow-strong:    rgba(0, 0, 0, 0.4);
@@ -21,9 +19,21 @@
   margin: 0;
   box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+  height: 100%;
+}
 body {
   font-family: "Italianno", sans-serif;
   background-color: var(--body-bg);
+  margin: 0;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+.ct_site{
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
 }
 .ct_skew {
   width: 100%;
@@ -32,6 +42,7 @@ body {
   z-index: 10;
   overflow: hidden;
   display: flex;
+  scroll-snap-align: start;
   align-items: flex-end;
   justify-content: center;
   text-align: center;
@@ -53,6 +64,7 @@ body {
   width: 100%;
   height: 100%;
   display: flex;
+  top: 0;
   align-items: center;
   color: #fff;
   flex-direction: column;
@@ -66,13 +78,27 @@ body {
   font-family: "Cormorant Garamond", sans-serif;
   text-shadow: 0 5px 10px #00000080;
   font-weight: 300;
+  opacity: 0;
   line-height: 30px;
+  animation: appear 1s ease forwards;
   margin-bottom: calc(5% - 20px);
 }
 
 .ct_skew .ct_cap h2 p {
   font-size: 2.5rem;
+  animation: appear 1s ease backwards 1s;
   font-weight: 400;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .ct_skew .ct_cap h1 {
@@ -80,6 +106,7 @@ body {
   font-weight: 400;
   text-shadow: 0 5px 10px #00000080;
   width: 10%;
+  animation: appear 1s ease backwards 1.5s;
   text-align: center;
   margin-bottom: calc(10% + 20px);
 }
@@ -87,7 +114,7 @@ body {
 @media (max-width: 450px) {
   .ct_skew .skew {
     height: 100%;
-    bottom: calc(-40% - 10px);
+    bottom: calc(-40% - 30px);
     transform: skew(-65deg, 15deg);
   }
 
@@ -124,9 +151,10 @@ body {
     border-radius: 15px;
     border: 1px solid var(--wine-burgundy);
     position: absolute;
+    animation: appear 1s ease backwards 2s;
     padding: 2rem;
     z-index: 25;
-    bottom: calc(15% - 20px);
+    bottom: calc(10% - 20px);
   }
   .ct_skew .countdown::before{
     content: "¡Cuenta Regresiva!";
@@ -134,6 +162,7 @@ body {
     font-family: 'cormorant garamond', serif;
     top: 20px;
     left: 0;
+    animation: updwn 1s ease backwards 3s;
     display: flex;
     font-weight: 500;
     width: 100%;
@@ -172,5 +201,47 @@ body {
     font-size: 1.25rem;
     font-weight: 500;
     margin-top: 5px;
+  }
+  main .ct_wedding{
+    width: 100%;
+    scroll-snap-align: start;
+    height: 100vh;
+    display: flex;
+    padding: 2rem;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    z-index: 30;
+    overflow: hidden;
+    background: var(--body-bg);
+    position: relative;
+  }
+  main .ct_wedding .title_wed h1{
+    width: 100%;
+    font-size: 3rem;
+    color: var(--wine-classic);
+  }
+  main .ct_wedding .title_wed p{
+    width: 90%;
+    margin: auto;
+    font-size: 1.375rem;
+    font-family: 'cormorant garamond', sans-serif;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  main .ct_wedding svg {
+    bottom: 0;
+    position: absolute;
+    height: 100px;
+  }
+  @keyframes updwn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
