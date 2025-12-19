@@ -31,9 +31,12 @@ body {
   scroll-behavior: smooth;
 }
 .ct_site {
-  scroll-snap-type: y mandatory;
+  /*scroll-snap-type: y mandatory;*/
   overflow-y: scroll;
   height: 100vh;
+}
+.ct_section {
+  scroll-snap-align: start;
 }
 .ct_skew {
   width: 100%;
@@ -42,7 +45,6 @@ body {
   z-index: 10;
   overflow: hidden;
   display: flex;
-  scroll-snap-align: start;
   align-items: flex-end;
   justify-content: center;
   text-align: center;
@@ -204,7 +206,6 @@ body {
   }
   main .ct_wedding {
     width: 100%;
-    scroll-snap-align: start;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -262,11 +263,12 @@ body {
     font-weight: 700;
   }
 
-  main .ct_wedding .addeventatc{
+  main .ct_wedding .addeventatc {
     border: 2px solid var(--wine-classic);
     background-color: var(--body-bg);
     margin: 60px 0;
-    padding: 1rem 2.25rem;
+    padding: 1rem 3.25rem;
+    text-transform: capitalize;
     font-family: "Cormorant Garamond", serif;
     box-shadow: 0 5px 10px var(--shadow-soft);
     font-size: 1.25rem;
@@ -277,11 +279,93 @@ body {
     border-radius: 5px;
     justify-content: center;
   }
-  
-  main .ct_wedding .addeventatc i{
+
+  main .ct_wedding .addeventatc i {
     color: #000;
     font-size: 1.5rem;
     margin: 0 10px;
+  }
+
+  main .ct_loc {
+    width: 100%;
+    height: 150vh;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-direction: column;
+    position: relative;
+    background-color: var(--wine-guinda);
+  }
+  main .ct_loc .title_sec {
+    width: 85%;
+    margin: 0 auto;
+  }
+  main .ct_loc .title_sec h1 {
+    color: var(--cream-soft);
+    font-weight: 300;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    margin-top: 2rem;
+  }
+  main .ct_loc .title_sec h3{
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--cream-soft);
+    font-size: 1.75rem;
+    font-weight: 300;
+  }
+  main .ct_loc .title_sec .airport {
+    width: 100%;
+    font-family: 'Cormorant Garamond', serif;
+    display: flex;
+    color: var(--cream-soft);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 3rem;
+  }
+  main .ct_loc .title_sec .airport i {
+    font-size: 4.5rem;
+    color: var(--cream-soft);
+    margin-bottom: 20px;
+  }
+  main .ct_loc .title_sec .airport h2{
+    font-size: 2.25rem;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+  }
+  main .ct_loc .title_sec .airport p{
+    font-family:'Outfit', sans-serif;
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 5px;
+    font-weight: 300;
+  }
+  main .ct_loc .title_sec .airport a{
+    color: var(--wine-deep);
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+    border: 2px solid  var(--wine-deep);
+    box-shadow: 0 5px 10px var(--shadow-medium);
+    margin-top: 30px;
+    font-size: 1.25rem;
+    padding: 1rem 2.5rem;
+    background-color: var(--body-bg);
+  }  
+  main .ct_loc .title_sec .airport img{
+    width: 50%;
+    height: 120px;
+    object-fit: cover;
+    object-position: center;
+    vertical-align: top;
+    filter: invert();
+  }
+  main .ct_loc svg {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
   }
 
   @keyframes updwn {
