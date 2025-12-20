@@ -288,7 +288,7 @@ body {
 
   main .ct_loc {
     width: 100%;
-    height: 200vh;
+    height: auto;
     overflow: hidden;
     display: flex;
     align-items: flex-end;
@@ -322,7 +322,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 3rem;
+    margin: 7rem auto;
   }
   main .ct_loc .title_sec .airport i {
     font-size: 4.5rem;
@@ -348,6 +348,9 @@ body {
     border-radius: 5px;
     border: 2px solid  var(--wine-deep);
     box-shadow: 0 5px 10px var(--shadow-medium);
+    display: inline-flex;
+    align-self: center;
+    justify-content: center;
     margin-top: 30px;
     font-size: 1.25rem;
     padding: 1rem 2.5rem;
