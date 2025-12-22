@@ -31,3 +31,23 @@ function updateCountdown() {
 
 const timer = setInterval(updateCountdown, 1000);
 updateCountdown();
+
+const qtyInput = document.getElementById("adultos");
+const qtyButtons = document.querySelectorAll(".qty-btn");
+
+qtyButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const action = btn.dataset.action;
+    let value = parseInt(qtyInput.value);
+    const min = parseInt(qtyInput.min);
+    const max = parseInt(qtyInput.max);
+
+    if (action === "increase" && value < max) {
+      qtyInput.value = value + 1;
+    }
+
+    if (action === "decrease" && value > min) {
+      qtyInput.value = value - 1;
+    }
+  });
+});

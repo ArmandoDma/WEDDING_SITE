@@ -453,7 +453,7 @@ body {
   }
   main .ct_dresscode .title_sec {
     width: 85%;
-    margin: 20px auto;
+    margin: 30px auto;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -464,8 +464,8 @@ body {
   main .ct_dresscode .title_sec h1{
     color: var(--cream-soft);
     font-weight: 600;
-    font-size: 3.25rem;
-    margin-top: 3rem;
+    font-size: 3rem;
+    margin-top: 70px;
     text-transform: capitalize;
   }
   main .ct_dresscode .title_sec .icons{
@@ -476,6 +476,7 @@ body {
     display: flex;
     overflow: hidden;
     align-items: center;
+    margin: 20px auto;
     justify-content: center;
   }
   
@@ -491,10 +492,11 @@ body {
     color: var(--cream-soft);  
     font-size: 1.25rem;
     font-weight: 500;
+    margin: 20px 0;
   }
   main .ct_rsvp{
     width: 100%;
-    text-align: center;
+    height: auto;
     overflow: hidden;
     background-color: var(--body-bg);
     position: relative;
@@ -503,6 +505,7 @@ body {
   main .ct_rsvp .title_sec h1{
     font-size: 3.5rem;
     color: var(--wine-guinda);
+    margin: 30px 0;
     font-weight: 600;
   }
   main .ct_rsvp .title_sec p{
