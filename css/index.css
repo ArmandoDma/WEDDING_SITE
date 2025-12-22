@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Italianno&family=Tangerine:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Outfit:wght@100..900&display=swap");
+@import url("./alter.css");
 
 :root {
   --body-bg: #fff7f3;
@@ -227,7 +228,7 @@ body {
     width: 90%;
     margin: auto;
     font-size: 1.375rem;
-    font-family: "cormorant garamond", sans-serif;
+    font-family: "Cormorant Garamond", sans-serif;
     text-align: center;
     margin-top: 1rem;
     animation: updwn 1s ease backwards 0.5s;
@@ -285,7 +286,13 @@ body {
     font-size: 1.5rem;
     margin: 0 10px;
   }
-
+  main .ct_wedding .place{
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--wine-classic);
+  }
+  main .ct_wedding .place h2{
+    font-weight: 300;
+  }
   main .ct_loc {
     width: 100%;
     height: auto;
@@ -369,6 +376,137 @@ body {
     position: absolute;
     bottom: 0;
     z-index: 10;
+  }
+  main .ct_place {
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    z-index: 30;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  main .ct_place::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient( 0deg, var(--body-bg)30%, #c97a8c30 100%);
+    z-index: 35;
+    width: 100%;
+    height: 100px;
+  }
+  
+  main .ct_place img{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    object-fit: cover;
+    object-position: center;
+    vertical-align: top;
+  }
+  main .ct_place .title_sec {
+    width: 85%;
+    margin: 25px auto;
+  }
+  main .ct_place .title_sec h1 {
+    width: 100%;
+    font-size: 3.5rem;
+    color: var(--wine-classic);
+    font-weight: 600;
+  }
+  main .ct_place .title_sec i{
+    font-size: 2.5rem;
+    color: var(--wine-deep);
+  }
+  main .ct_place .title_sec p{
+    font-family: 'Cormorant Garamond', Outfit, serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--wine-burgundy);
+  }
+  main .ct_dresscode {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--wine-guinda);
+    position: relative;
+    z-index: 20;
+  }
+  main .ct_dresscode svg {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 15;
+  }
+  main .ct_dresscode .title_sec {
+    width: 85%;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 100%;
+    z-index: 30;
+  }
+  main .ct_dresscode .title_sec h1{
+    color: var(--cream-soft);
+    font-weight: 600;
+    font-size: 3.25rem;
+    margin-top: 3rem;
+    text-transform: capitalize;
+  }
+  main .ct_dresscode .title_sec .icons{
+    width: 100%;
+    height: 500px;
+    border-radius: 180px;
+    background-color: var(--wine-rose);
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  main .ct_dresscode .title_sec .icons img{
+    width: 170px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    vertical-align: top;
+  }
+  main .ct_dresscode .title_sec p{
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--cream-soft);  
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+  main .ct_rsvp{
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    background-color: var(--body-bg);
+    position: relative;
+    z-index: 10;
+  }
+  main .ct_rsvp .title_sec h1{
+    font-size: 3.5rem;
+    color: var(--wine-guinda);
+    font-weight: 600;
+  }
+  main .ct_rsvp .title_sec p{
+    font-size: 1.125rem;
+    font-family: 'Cormorant Garamont', serif;
+    margin: 20px auto;
+    width: 90%;
   }
 
   @keyframes updwn {

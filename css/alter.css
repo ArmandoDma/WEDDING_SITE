@@ -1,3 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Italianno&family=Tangerine:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Outfit:wght@100..900&display=swap");
+
+:root {
+  --body-bg: #fff7f3;
+  --wine-deep: #5a0f2e;
+  --wine-guinda: #7b1e3a;
+  --wine-classic: #8c1d40;
+  --wine-burgundy: #a33a5b;
+  --wine-rose: #c97a8c;
+  --cream-soft: #f5efea;
+  --white-broken: #fbf7f4;
+  --shadow-soft: rgba(0, 0, 0, 0.15);
+  --shadow-medium: rgba(0, 0, 0, 0.25);
+  --shadow-strong: rgba(0, 0, 0, 0.4);
+}
+
 #envelope {
     position: relative;
     width: 280px;
@@ -7,7 +24,7 @@
     margin-left: auto;
     margin-right: auto;
     top: 150px;
-    background-color: #00334c;
+    background-color: var(--wine-deep);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 .front {
@@ -20,13 +37,13 @@
     border-left: 140px solid transparent;
     border-right: 140px solid transparent;
     border-bottom: 82px solid transparent;
-    border-top: 98px solid #00334c;
+    border-top: 98px solid var(--wine-deep);
     transform-origin: top;
 }
 .pocket {
-    border-left: 140px solid #0077b2;
-    border-right: 140px solid #0077b2;
-    border-bottom: 90px solid #006da3;
+    border-left: 140px solid var(--wine-guinda);
+    border-right: 140px solid var(--wine-guinda);
+    border-bottom: 90px solid var(--wine-classic);
     border-top: 90px solid transparent;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
@@ -37,8 +54,11 @@
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-    height: 90%;
+    height: 100%;
     top: 5%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
     border-radius: 6px;
     box-shadow: 0 2px 26px rgba(0, 0, 0, .12);
 }
@@ -56,7 +76,7 @@
     left: 10%;
     width: 80%;
     height: 14%;
-    background-color: #eeeff0;
+    background-color: var(--white-broken);
 }
 .words.line1 {
     top: 15%;
@@ -88,7 +108,7 @@
     z-index: 1;
 }
 .open .letter {
-    transform: translatey(-60px);
+    transform: translatey(-100px);
     transition: transform 0.4s 0.6s ease, z-index 0.6s;
     z-index: 2;
 }
@@ -155,6 +175,7 @@
     }
     100% {
         top: -600px;
+        opacity: 0;
     }
 }
 @keyframes sideSway {
@@ -180,9 +201,9 @@ body {
     transition: all 0.1s linear;
     -webkit-appearance: none;
     background-color: transparent;
-    border: solid 2px #0077b2;
+    border: solid 2px var(--wine-deep);
     border-radius: 4px;
-    color: #0077b2;
+    color: var(--wine-guinda);
     display: inline-block;
     font-size: 14px;
     text-transform: uppercase;
@@ -194,6 +215,73 @@ body {
     outline: none;
 }
 .reset button:hover {
-    background-color: #0077b2;
+    background-color: var(--wine-deep);
     color: #fff;
+}
+
+.rsvp-form {
+  max-width: 90%;
+  z-index: 10;
+  border: 1px solid var(--wine-rose);
+  margin: 0 auto 40px;
+  padding: 25px;
+  background: var(--cream-soft);
+  font-family: 'Cormorant Garamond', serif;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px var(--shadow-soft);
+}
+
+.rsvp-intro {
+  color: var(--wine-deep);
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.rsvp-form .field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.rsvp-form label {
+  font-size: 1rem;
+  color: var(--wine-guinda);
+  margin-bottom: 6px;
+}
+
+.rsvp-form input,
+.rsvp-form select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--wine-rose);
+  background: var(--white-broken);
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--wine-deep);
+  outline: none;
+}
+
+.rsvp-form input:focus,
+.rsvp-form select:focus {
+  border-color: var(--wine-classic);
+}
+
+.rsvp-form button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: var(--wine-deep);
+  color: var(--white-broken);
+  font-weight: 600;
+  font-family: inherit;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.rsvp-form button:hover {
+  background: var(--wine-classic);
 }
