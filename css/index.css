@@ -505,7 +505,9 @@ body {
   main .ct_rsvp .title_sec h1{
     font-size: 3.5rem;
     color: var(--wine-guinda);
-    margin: 30px 0;
+    margin: 40px 0;
+    width: 100%;
+    text-align: center;
     font-weight: 600;
   }
   main .ct_rsvp .title_sec p{
