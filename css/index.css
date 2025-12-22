@@ -289,7 +289,7 @@ body {
   main .ct_wedding .place{
     font-family: 'Cormorant Garamond', serif;
     color: var(--wine-classic);
-    margin: 50px 0;
+    margin: 150px 0;
   }
   main .ct_wedding .place h2{
     font-weight: 300;
@@ -404,6 +404,7 @@ body {
   
   main .ct_place img{
     width: 100%;
+    height: auto;
     position: absolute;
     bottom: 0;
     object-fit: cover;
@@ -413,7 +414,7 @@ body {
   main .ct_place .title_sec {
     width: 85%;
     margin-top: 30px;
-    margin-bottom: 120px;
+    margin-bottom: 200px;
   }
   main .ct_place .title_sec h1 {
     width: 100%;
@@ -452,7 +453,7 @@ body {
   }
   main .ct_dresscode .title_sec {
     width: 85%;
-    margin: 70px auto;
+    margin: 100px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -472,7 +473,7 @@ body {
     height: 500px;
     border-radius: 180px;
     background-color: var(--wine-rose);
-    margin: 30px 0;
+    margin: 50px 0;
     display: flex;
     overflow: hidden;
     align-items: center;
@@ -490,7 +491,7 @@ body {
     font-family: 'Cormorant Garamond', serif;
     color: var(--cream-soft);  
     font-size: 1.25rem;
-    margin: 20px 0;
+    margin: 50px 0;
     font-weight: 500;
   }
   main .ct_rsvp{
