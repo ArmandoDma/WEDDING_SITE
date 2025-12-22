@@ -289,7 +289,7 @@ body {
   main .ct_wedding .place{
     font-family: 'Cormorant Garamond', serif;
     color: var(--wine-classic);
-    margin: 70px 0;
+    margin: 50px 0;
   }
   main .ct_wedding .place h2{
     font-weight: 300;
@@ -380,7 +380,7 @@ body {
   }
   main .ct_place {
     width: 100%;
-    height: 150vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -432,7 +432,7 @@ body {
   }
   main .ct_dresscode {
     width: 100%;
-    height: 110vh;
+    height: auto;
     text-align: center;
     overflow: hidden;
     display: flex;
