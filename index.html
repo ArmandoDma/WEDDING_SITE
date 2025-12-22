@@ -80,6 +80,7 @@
               <p>San Miguel de Allende</p>
             </h2>
           </div>
+          <div class="date_again"></div>
 
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path
@@ -157,6 +158,7 @@
               10:00 p.m. -
             </p>
           </div>
+          <div class="title_sec"></div>
 
           <img src="sources/terraza.png" alt="B'ANI Terraza" />
         </div>
@@ -200,17 +202,17 @@
 
               <div class="field">
                 <label>Nombre completo</label>
-                <input type="text" id="name" required />
+                <input type="text" id="nombre" name="nombre" required />
               </div>
 
               <div class="field">
                 <label>Correo electrónico</label>
-                <input type="email" id="email" required />
+                <input type="email" id="email" name="email" required />
               </div>
 
               <div class="field">
                 <label>¿Asistirás?</label>
-                <select id="attendance" required>
+                <select id="asistencia" name="asistencia" required>
                   <option value="">Selecciona una opción</option>
                   <option value="Sí asistiré">Sí, con mucho gusto</option>
                   <option value="No podré asistir">No podré asistir</option>
@@ -219,12 +221,12 @@
 
               <div class="field">
                 <label>¿Cuántos adultos asistirán?</label>
-                <input type="number" id="guests" min="1" max="5" value="1" />
+                <input type="number" id="adultos" name="adultos" min="1" max="5" value="1" />
               </div>
 
               <div class="field">
                 <label>¿Asistirás a la tornaboda?</label>
-                <select id="tornaboda" required>
+                <select id="tornaboda" name="tornaboda" required>
                   <option value="">Selecciona</option>
                   <option value="Sí">Sí</option>
                   <option value="No">No</option>

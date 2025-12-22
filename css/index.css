@@ -379,7 +379,7 @@ body {
   }
   main .ct_place {
     width: 100%;
-    height: 110vh;
+    height: 115vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -431,7 +431,7 @@ body {
   }
   main .ct_dresscode {
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     text-align: center;
     overflow: hidden;
     display: flex;
@@ -450,7 +450,7 @@ body {
   }
   main .ct_dresscode .title_sec {
     width: 85%;
-    margin: 20px auto;
+    margin: 30px auto;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
