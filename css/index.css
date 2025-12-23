@@ -302,14 +302,14 @@ body {
     justify-content: flex-start;
     flex-direction: column;
     position: relative;
-    background-color: var(--body-bg);
+    background-color: var(--wine-guinda);
   }
   main .ct_loc .title_sec {
     width: 85%;
     margin: 100px auto;
   }
   main .ct_loc .title_sec h1 {
-    color: var(--wine-guinda);
+    color: var(--white-broken);
     font-weight: 300;
     font-size: 2.5rem;
     text-transform: capitalize;
@@ -317,7 +317,7 @@ body {
   }
   main .ct_loc .title_sec h3{
     font-family: 'Cormorant Garamond', serif;
-    color: var(--wine-guinda);
+    color: var(--white-broken);
     font-size: 1.75rem;
     font-weight: 300;
   }
@@ -325,7 +325,7 @@ body {
     width: 100%;
     font-family: 'Cormorant Garamond', serif;
     display: flex;
-    color: var(--wine-deep);
+    color: var(--white-broken);
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -333,7 +333,7 @@ body {
   }
   main .ct_loc .title_sec .airport i {
     font-size: 4.5rem;
-    color: var(--wine-classic);
+    color: var(--white-broken);
     margin-bottom: 20px;
   }
   main .ct_loc .title_sec .airport h2{
@@ -344,7 +344,6 @@ body {
   main .ct_loc .title_sec .airport p{
     font-family:'Outfit', sans-serif;
     text-align: center;
-    text-transform: capitalize;
     margin-top: 5px;
     font-weight: 300;
   }
@@ -368,12 +367,14 @@ body {
     height: 120px;
     object-fit: cover;
     object-position: center;
+    filter: invert();
     vertical-align: top;
   }
   main .ct_loc svg {
     width: 100%;
     position: absolute;
     top: 0;
+    transform: rotateX(-180deg);
     z-index: 10;
   }
   main .ct_place {
@@ -441,7 +442,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--wine-guinda);
+    background-color: var(--body-bg);
     position: relative;
     z-index: 20;
   }
@@ -462,48 +463,58 @@ body {
     z-index: 30;
   }
   main .ct_dresscode .title_sec h1{
-    color: var(--cream-soft);
+    color: var(--wine-guinda);
     font-weight: 600;
     font-size: 3rem;
     margin-top: 70px;
     text-transform: capitalize;
-  }
-  main .ct_dresscode .title_sec .icons{
+  }  
+  main .ct_dresscode .title_sec .ct_cuadro{
     width: 100%;
-    height: 500px;
-    border-radius: 180px;
-    background-color: var(--wine-rose);
-    display: flex;
     overflow: hidden;
-    align-items: center;
-    margin: 20px auto;
-    justify-content: center;
+    margin: 30px auto;
+    box-shadow: 0 5px 10px var(--shadow-medium);
+    border: 10px solid var(--wine-deep);
+    padding: 10px;
   }
-  
-  main .ct_dresscode .title_sec .icons h2{
-    font-size: 10rem;
-    color: var(--wine-deep);
-    transform: rotate(-45deg);
-    text-shadow: 0 10px 15px var(--shadow-soft);
+  main .ct_dresscode .title_sec .ct_cuadro img{
+    width: 100%;
+    height: 200px;
+    vertical-align: top;    
+    object-fit: cover;
+    object-position: center;
   }
-  main .ct_dresscode .title_sec p{
+  main .ct_dresscode .title_sec .airbnb h3,
+  main .ct_dresscode .title_sec .hotel h3{
+    font-size: 1.625rem;
     font-family: 'Cormorant Garamond', serif;
-    color: var(--cream-soft);  
+    margin-bottom: 10px;
+  }
+  main .ct_dresscode .title_sec .airbnb a,
+  main .ct_dresscode .title_sec .hotel a{
+    font-family: 'Cormorant Garamond', serif;
+    display: inline-flex;
+    box-shadow: 0 5px 10px var(--shadow-soft);
+    padding: 15px 30px;
+    border-radius: 5px;
     font-size: 1.25rem;
     font-weight: 500;
-    margin: 20px 0;
+    border: 3px solid var(--wine-deep);
+    text-decoration: none;
+    color: var(--wine-guinda);
   }
+
   main .ct_rsvp{
     width: 100%;
     height: auto;
     overflow: hidden;
-    background-color: var(--body-bg);
+    background-color: var(--wine-guinda);
     position: relative;
     z-index: 10;
   }
   main .ct_rsvp .title_sec h1{
     font-size: 3.5rem;
-    color: var(--wine-guinda);
+    color: var(--white-broken);
     margin: 40px 0;
     width: 100%;
     text-align: center;

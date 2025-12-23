@@ -42,9 +42,9 @@
   transform-origin: top;
 }
 .pocket {
-  border-left: 140px solid var(--wine-guinda);
-  border-right: 140px solid var(--wine-guinda);
-  border-bottom: 90px solid var(--wine-classic);
+  border-left: 140px solid var(--wine-classic);
+  border-right: 140px solid var(--wine-classic);
+  border-bottom: 90px solid var(--wine-burgundy);
   border-top: 90px solid transparent;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
