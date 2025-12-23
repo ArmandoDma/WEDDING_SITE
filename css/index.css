@@ -515,6 +515,94 @@ body {
     margin: 20px auto;
     width: 90%;
   }
+  main .ct_timeline{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+    text-align: center;
+    background-color: var(--body-bg);
+  }
+  main .ct_timeline svg{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+  }
+  main .ct_timeline h2{
+    font-size: 3.5rem;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: var(--wine-guinda);
+  }
+  main .ct_timeline .ct_tline{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  main .ct_timeline .ct_tline .ct_item{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+  }
+  main .ct_timeline .ct_tline .ct_item .icon{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    justify-content: center;
+  }
+  main .ct_timeline .ct_tline .ct_item .icon img{
+    width: 50%;
+    vertical-align: top;
+    object-fit: cover;
+    object-position: center;
+  }
+  main .ct_timeline .ct_tline .ct_item .info_item{
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    padding: 20px;
+    flex-direction: column;
+  }
+  main .ct_timeline .ct_tline .ct_item .info_item::before{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    transform: rotate(45deg);
+    left: -28px;
+    background-color: var(--wine-deep);
+  }
+  main .ct_timeline .ct_tline .ct_item .info_item::after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: -20px;
+    width: 3px;
+    border-radius: 20px;
+    height: 225px;
+    background-color: var(--wine-deep);
+  }
+  main .ct_timeline .ct_tline .ct_item .info_item h3{
+    font-size: 1.75rem;
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--wine-guinda);
+  }
+  main .ct_timeline .ct_tline .ct_item .info_item p{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    color: var(--wine-guinda);
+  }
 
   @keyframes updwn {
     0% {
