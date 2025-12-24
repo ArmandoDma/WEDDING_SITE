@@ -415,7 +415,12 @@ body {
   main .ct_place .space{
     width: 100%;
     display: block;
-    height: 100px;
+    margin: 20px 0;
+  }
+  main .ct_place .space p{
+    font-size: 1.5rem;
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--white-broken);
   }
   main .ct_place .title_sec h1 {
     width: 100%;
@@ -432,6 +437,40 @@ body {
     font-size: 1.25rem;
     font-weight: 600;
     color: var(--body-bg);
+  }
+  main .ct_place .title_sec p span{
+    display: inline-flex;
+    align-items: center;
+  }
+  main .ct_place .title_sec p span a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--wine-guinda);
+    font-size: 1.25rem;
+    padding: 10px;
+    margin: 20px 10px;
+    border-radius: 5px;
+    border: 3px solid var(--wine-deep);
+    box-shadow: 0 5px 10px var(--shadow-medium);
+    background-color: var(--cream-soft);
+  }
+  main .ct_place .title_sec p span .btn_ig{
+    padding: 18px 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  main .ct_place .title_sec p span .btn_ig i{
+    margin: 0;
+    font-size: 2rem;
+  }
+  main .ct_place .title_sec p span a i{
+    font-size: 1.5rem;
+    color: var(--wine-guinda);
+    line-height: 10px;
+    margin-right: 10px;
   }
   main .ct_dresscode {
     width: 100%;
@@ -486,9 +525,10 @@ body {
   }
   main .ct_dresscode .title_sec .airbnb h3,
   main .ct_dresscode .title_sec .hotel h3{
-    font-size: 1.625rem;
+    font-size: 1.75rem;
     font-family: 'Cormorant Garamond', serif;
     margin-bottom: 10px;
+    color: var(--wine-guinda);
   }
   main .ct_dresscode .title_sec .airbnb a,
   main .ct_dresscode .title_sec .hotel a{
@@ -498,12 +538,18 @@ body {
     padding: 15px 30px;
     border-radius: 5px;
     font-size: 1.25rem;
+    align-items: center;
+    justify-content: center;
     font-weight: 500;
     border: 3px solid var(--wine-deep);
     text-decoration: none;
     color: var(--wine-guinda);
   }
-
+  main .ct_dresscode .title_sec .airbnb a i,
+  main .ct_dresscode .title_sec .hotel a i{
+    font-size: 1.625rem;
+    margin-right: 5px;
+  }
   main .ct_rsvp{
     width: 100%;
     height: auto;
@@ -511,6 +557,30 @@ body {
     background-color: var(--wine-guinda);
     position: relative;
     z-index: 10;
+  }
+  main .ct_rsvp .title_sec .ct_gifts h1{
+    font-size: 3.5rem;
+    color: var(--white-broken);
+    margin: 40px 0;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+  }
+  main .ct_rsvp .title_sec .ct_gifts p{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 50px;
+    font-size: 1.125rem;
+    text-align: center;
+    color: var(--cream-soft);
+  }
+  main .ct_rsvp .title_sec .ct_gifts h2{
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    color: var(--cream-soft);
+    text-align: center;
+    font-weight: 300;
+    font-family: 'Coramont Garamond', serif;
   }
   main .ct_rsvp .title_sec h1{
     font-size: 3.5rem;
