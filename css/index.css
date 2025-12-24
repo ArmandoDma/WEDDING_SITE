@@ -561,8 +561,8 @@ body {
   main .ct_rsvp .title_sec .ct_gifts h1{
     font-size: 3.5rem;
     color: var(--white-broken);
-    margin: 40px 0;
-    width: 100%;
+    margin: 40px auto;
+    width: 90%;
     text-align: center;
     font-weight: 600;
   }
@@ -581,6 +581,13 @@ body {
     text-align: center;
     font-weight: 300;
     font-family: 'Coramont Garamond', serif;
+  }
+  main .ct_rsvp .title_sec .ct_gifts .gift span{
+    text-align: center;
+    display: block;
+    margin: 30px auto;
+    font-size: 4rem;
+    color: var(--cream-soft);
   }
   main .ct_rsvp .title_sec h1{
     font-size: 3.5rem;
