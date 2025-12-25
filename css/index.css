@@ -20,10 +20,24 @@
   margin: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
 body {
   font-family: "Italianno", sans-serif;
   background-color: var(--body-bg);
   margin: 0;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+.ct_site {
+  /*scroll-snap-type: y mandatory;*/
+  overflow-y: scroll;
+  height: 100vh;
+}
+.ct_section {
+  scroll-snap-align: start;
 }
 .ct_skew {
   width: 100%;
@@ -206,6 +220,7 @@ body {
   }
   main .ct_wedding .title_wed h1 {
     width: 100%;
+    animation: updwn 1s ease forwards;
     font-size: 3rem;
     color: var(--wine-classic);
   }
@@ -216,6 +231,7 @@ body {
     font-family: "Cormorant Garamond", sans-serif;
     text-align: center;
     margin-top: 1rem;
+    animation: updwn 1s ease backwards 0.5s;
   }
   main .ct_wedding svg {
     bottom: 0;
@@ -270,11 +286,11 @@ body {
     font-size: 1.5rem;
     margin: 0 10px;
   }
-  main .ct_wedding .place {
-    font-family: "Cormorant Garamond", serif;
+  main .ct_wedding .place{
+    font-family: 'Cormorant Garamond', serif;
     color: var(--wine-classic);
   }
-  main .ct_wedding .place h2 {
+  main .ct_wedding .place h2{
     font-weight: 300;
   }
   main .ct_loc {
@@ -299,15 +315,15 @@ body {
     text-transform: capitalize;
     margin-top: 2rem;
   }
-  main .ct_loc .title_sec h3 {
-    font-family: "Cormorant Garamond", serif;
+  main .ct_loc .title_sec h3{
+    font-family: 'Cormorant Garamond', serif;
     color: var(--white-broken);
     font-size: 1.75rem;
     font-weight: 300;
   }
   main .ct_loc .title_sec .airport {
     width: 100%;
-    font-family: "Cormorant Garamond", serif;
+    font-family: 'Cormorant Garamond', serif;
     display: flex;
     color: var(--white-broken);
     align-items: center;
@@ -320,23 +336,23 @@ body {
     color: var(--white-broken);
     margin-bottom: 20px;
   }
-  main .ct_loc .title_sec .airport h2 {
+  main .ct_loc .title_sec .airport h2{
     font-size: 2.25rem;
     margin-bottom: 20px;
     text-transform: capitalize;
   }
-  main .ct_loc .title_sec .airport p {
-    font-family: "Outfit", sans-serif;
+  main .ct_loc .title_sec .airport p{
+    font-family:'Outfit', sans-serif;
     text-align: center;
     margin-top: 5px;
     font-weight: 300;
   }
-  main .ct_loc .title_sec .airport a {
+  main .ct_loc .title_sec .airport a{
     color: var(--wine-deep);
     text-decoration: none;
     font-weight: 500;
     border-radius: 5px;
-    border: 2px solid var(--wine-deep);
+    border: 2px solid  var(--wine-deep);
     box-shadow: 0 5px 10px var(--shadow-medium);
     display: inline-flex;
     align-self: center;
@@ -345,8 +361,8 @@ body {
     font-size: 1.25rem;
     padding: 1rem 2.5rem;
     background-color: var(--body-bg);
-  }
-  main .ct_loc .title_sec .airport img {
+  }  
+  main .ct_loc .title_sec .airport img{
     width: 50%;
     height: 120px;
     object-fit: cover;
@@ -374,19 +390,19 @@ body {
     overflow: hidden;
     position: relative;
   }
-
-  main .ct_place::after {
+  
+  main .ct_place::after{
     content: "";
     display: block;
     position: absolute;
     bottom: 0;
-    background: linear-gradient(0deg, var(--wine-guinda) 30%, #c97a8c30 100%);
+    background: linear-gradient( 0deg, var(--wine-guinda)30%, #c97a8c30 100%);
     z-index: 35;
     width: 100%;
     height: 100px;
   }
-
-  main .ct_place img {
+  
+  main .ct_place img{
     width: 100%;
     object-fit: cover;
     object-position: center;
@@ -396,14 +412,14 @@ body {
     width: 85%;
     margin: 25px auto;
   }
-  main .ct_place .space {
+  main .ct_place .space{
     width: 100%;
     display: block;
     margin: 20px 0;
   }
-  main .ct_place .space p {
+  main .ct_place .space p{
     font-size: 1.5rem;
-    font-family: "Cormorant Garamond", serif;
+    font-family: 'Cormorant Garamond', serif;
     color: var(--white-broken);
   }
   main .ct_place .title_sec h1 {
@@ -412,21 +428,21 @@ body {
     color: var(--white-broken);
     font-weight: 600;
   }
-  main .ct_place .title_sec i {
+  main .ct_place .title_sec i{
     font-size: 2.5rem;
     color: var(--white-broken);
   }
-  main .ct_place .title_sec p {
-    font-family: "Cormorant Garamond", Outfit, serif;
+  main .ct_place .title_sec p{
+    font-family: 'Cormorant Garamond', Outfit, serif;
     font-size: 1.25rem;
     font-weight: 600;
     color: var(--body-bg);
   }
-  main .ct_place .title_sec p span {
+  main .ct_place .title_sec p span{
     display: inline-flex;
     align-items: center;
   }
-  main .ct_place .title_sec p span a {
+  main .ct_place .title_sec p span a{
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -440,17 +456,17 @@ body {
     box-shadow: 0 5px 10px var(--shadow-medium);
     background-color: var(--cream-soft);
   }
-  main .ct_place .title_sec p span .btn_ig {
+  main .ct_place .title_sec p span .btn_ig{
     padding: 18px 10px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
   }
-  main .ct_place .title_sec p span .btn_ig i {
+  main .ct_place .title_sec p span .btn_ig i{
     margin: 0;
     font-size: 2rem;
   }
-  main .ct_place .title_sec p span a i {
+  main .ct_place .title_sec p span a i{
     font-size: 1.5rem;
     color: var(--wine-guinda);
     line-height: 10px;
@@ -485,14 +501,14 @@ body {
     height: 100%;
     z-index: 30;
   }
-  main .ct_dresscode .title_sec h1 {
+  main .ct_dresscode .title_sec h1{
     color: var(--wine-guinda);
     font-weight: 600;
     font-size: 3rem;
     margin-top: 70px;
     text-transform: capitalize;
-  }
-  main .ct_dresscode .title_sec .ct_cuadro {
+  }  
+  main .ct_dresscode .title_sec .ct_cuadro{
     width: 100%;
     overflow: hidden;
     margin: 30px auto;
@@ -500,23 +516,23 @@ body {
     border: 10px solid var(--wine-deep);
     padding: 10px;
   }
-  main .ct_dresscode .title_sec .ct_cuadro img {
+  main .ct_dresscode .title_sec .ct_cuadro img{
     width: 100%;
     height: 200px;
-    vertical-align: top;
+    vertical-align: top;    
     object-fit: cover;
     object-position: center;
   }
   main .ct_dresscode .title_sec .airbnb h3,
-  main .ct_dresscode .title_sec .hotel h3 {
+  main .ct_dresscode .title_sec .hotel h3{
     font-size: 1.75rem;
-    font-family: "Cormorant Garamond", serif;
+    font-family: 'Cormorant Garamond', serif;
     margin-bottom: 10px;
     color: var(--wine-guinda);
   }
   main .ct_dresscode .title_sec .airbnb a,
-  main .ct_dresscode .title_sec .hotel a {
-    font-family: "Cormorant Garamond", serif;
+  main .ct_dresscode .title_sec .hotel a{
+    font-family: 'Cormorant Garamond', serif;
     display: inline-flex;
     box-shadow: 0 5px 10px var(--shadow-soft);
     padding: 15px 30px;
@@ -530,11 +546,11 @@ body {
     color: var(--wine-guinda);
   }
   main .ct_dresscode .title_sec .airbnb a i,
-  main .ct_dresscode .title_sec .hotel a i {
+  main .ct_dresscode .title_sec .hotel a i{
     font-size: 1.625rem;
     margin-right: 5px;
   }
-  main .ct_rsvp {
+  main .ct_rsvp{
     width: 100%;
     height: auto;
     overflow: hidden;
@@ -542,7 +558,7 @@ body {
     position: relative;
     z-index: 10;
   }
-  main .ct_rsvp .title_sec .ct_gifts h1 {
+  main .ct_rsvp .title_sec .ct_gifts h1{
     font-size: 3.5rem;
     color: var(--white-broken);
     margin: 40px auto;
@@ -550,7 +566,7 @@ body {
     text-align: center;
     font-weight: 600;
   }
-  main .ct_rsvp .title_sec .ct_gifts p {
+  main .ct_rsvp .title_sec .ct_gifts p{
     width: 80%;
     margin: auto;
     margin-bottom: 50px;
@@ -558,22 +574,22 @@ body {
     text-align: center;
     color: var(--cream-soft);
   }
-  main .ct_rsvp .title_sec .ct_gifts h2 {
+  main .ct_rsvp .title_sec .ct_gifts h2{
     font-size: 1.25rem;
     text-transform: uppercase;
     color: var(--cream-soft);
     text-align: center;
     font-weight: 300;
-    font-family: "Coramont Garamond", serif;
+    font-family: 'Coramont Garamond', serif;
   }
-  main .ct_rsvp .title_sec .ct_gifts .gift span {
+  main .ct_rsvp .title_sec .ct_gifts .gift span{
     text-align: center;
     display: block;
     margin: 30px auto;
     font-size: 4rem;
     color: var(--cream-soft);
   }
-  main .ct_rsvp .title_sec h1 {
+  main .ct_rsvp .title_sec h1{
     font-size: 3.5rem;
     color: var(--white-broken);
     margin: 40px 0;
@@ -581,62 +597,62 @@ body {
     text-align: center;
     font-weight: 600;
   }
-  main .ct_rsvp .title_sec p {
+  main .ct_rsvp .title_sec p{
     font-size: 1.125rem;
-    font-family: "Cormorant Garamont", serif;
+    font-family: 'Cormorant Garamont', serif;
     margin: 20px auto;
     width: 90%;
   }
-  main .ct_timeline {
+  main .ct_timeline{
     width: 100%;
-    height: 110vh;
+    height: auto;
     position: relative;
     overflow: hidden;
     z-index: 10;
     text-align: center;
     background-color: var(--body-bg);
   }
-  main .ct_timeline svg {
+  main .ct_timeline svg{
     position: absolute;
     top: 0;
     width: 100%;
     left: 0;
   }
-  main .ct_timeline h2 {
+  main .ct_timeline h2{
     font-size: 3.5rem;
     margin-top: 70px;
     margin-bottom: 30px;
     font-weight: 600;
     color: var(--wine-guinda);
   }
-  main .ct_timeline .ct_tline {
+  main .ct_timeline .ct_tline{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  main .ct_timeline .ct_tline .ct_item {
+  main .ct_timeline .ct_tline .ct_item{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 50px auto;
   }
-  main .ct_timeline .ct_tline .ct_item .icon {
+  main .ct_timeline .ct_tline .ct_item .icon{
     width: 50%;
     display: flex;
     align-items: center;
     padding: 1.5rem;
     justify-content: center;
   }
-  main .ct_timeline .ct_tline .ct_item .icon img {
+  main .ct_timeline .ct_tline .ct_item .icon img{
     width: 50%;
     vertical-align: top;
     object-fit: cover;
     object-position: center;
   }
-  main .ct_timeline .ct_tline .ct_item .info_item {
+  main .ct_timeline .ct_tline .ct_item .info_item{
     width: 50%;
     display: flex;
     align-items: flex-start;
@@ -645,7 +661,7 @@ body {
     padding: 20px;
     flex-direction: column;
   }
-  main .ct_timeline .ct_tline .ct_item .info_item::before {
+  main .ct_timeline .ct_tline .ct_item .info_item::before{
     content: "";
     display: block;
     width: 20px;
@@ -655,7 +671,7 @@ body {
     left: -28px;
     background-color: var(--wine-deep);
   }
-  main .ct_timeline .ct_tline .ct_item .info_item::after {
+  main .ct_timeline .ct_tline .ct_item .info_item::after{
     content: "";
     display: block;
     position: absolute;
@@ -665,13 +681,13 @@ body {
     height: 225px;
     background-color: var(--wine-deep);
   }
-  main .ct_timeline .ct_tline .ct_item .info_item h3 {
+  main .ct_timeline .ct_tline .ct_item .info_item h3{
     font-size: 1.75rem;
-    font-family: "Cormorant Garamond", serif;
+    font-family: 'Cormorant Garamond', serif;
     color: var(--wine-guinda);
   }
-  main .ct_timeline .ct_tline .ct_item .info_item p {
-    font-family: "Cormorant Garamond", serif;
+  main .ct_timeline .ct_tline .ct_item .info_item p{
+    font-family: 'Cormorant Garamond', serif;
     font-size: 1.25rem;
     color: var(--wine-guinda);
   }
