@@ -4,7 +4,19 @@ const envelope = document.getElementById("envelope");
 const SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbxj-NuY1Z4SqgT9PEKG7J_hG6gLMlUAZnGfxfFIHrqdraShQpya58bx6dkqKr_PSAEt/exec";
 
-function insertQRIntoLetter(data) {
+function showRSVPSuccess() {
+  const msg = document.getElementById("rsvpSuccess");
+  if (!msg) return;
+
+  msg.classList.add("show");
+
+  setTimeout(() => {
+    msg.classList.remove("show");
+  }, 3500); 
+}
+
+
+/*function insertQRIntoLetter(data) {
   const letter = document.querySelector(".letter");
   if (!letter) return;
 
@@ -21,7 +33,7 @@ function insertQRIntoLetter(data) {
   qr.style.height = "120px";
 
   letter.appendChild(qr);
-}
+}*/
 
 function generateRSVPId(nombre) {
   const initials = nombre
@@ -60,10 +72,6 @@ if (form) {
       fecha: new Date().getDate()
     };
 
-    console.log(payload)
-
-    const qrData = JSON.stringify(payload);
-
     try {
       await fetch(SCRIPT_URL, {
         method: "POST",
@@ -76,10 +84,6 @@ if (form) {
     } catch (err) {
       console.error("Error enviando a Apps Script", err);
     }
-
-    insertQRIntoLetter(qrData);
-
-    envelope.classList.remove("close");
-    envelope.classList.add("open");
+    showRSVPSuccess()
   });
 }
